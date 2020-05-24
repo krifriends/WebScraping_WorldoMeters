@@ -17,8 +17,8 @@ class PopulationbycountriesSpider(scrapy.Spider):
             # abs_url = f"https://www.worldometers.info{urlName}"
 
             #Method-2:
-            #abs_url = response.urljoin(urlName)
-            #yield scrapy.Request(url=abs_url)
+            abs_url = response.urljoin(urlName)
+            yield scrapy.Request(url=abs_url)
 
             #Method-3:
-            yield response.follow(url=urlName)
+            #yield response.follow(url=urlName)
